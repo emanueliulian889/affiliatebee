@@ -1,0 +1,62 @@
+form {
+    border: 1px solid $border;
+    padding: 24px;
+    border-radius: 8px;
+    input {
+        height: 40px;
+        font-size: 1.6rem;
+    }
+    .form-control {
+        font-size: 1.6rem;
+        &:focus {
+            border-color: $primary-base;
+            box-shadow: none;
+        }
+    }
+    label {
+        font-size: 1.4rem;
+    }
+    .required {
+        color: #BD061B;
+    }
+    .error-state {
+        label {
+            color: #BD061B;
+        }
+        input {
+            border: 1px solid #BD061B;
+        }
+        .helper-text.error {
+            color: #BD061B;
+        }
+    }
+    .helper-text {
+        color: $subtle;
+        font-size: 1.2rem;
+        margin: 4px 0 0 0;
+        display: block;
+    }
+}
+
+.success-toast {
+    border-width: 1px 1px 1px 8px;
+    border-style: solid;
+    border-color: var(--bs-success);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    position: fixed;
+    top: 100px;
+    right: 32px;
+    max-width: 240px;
+    z-index: 999;
+    transition: all 0.4s;
+    p {
+        margin: 0;
+    }
+    &.fadeout {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

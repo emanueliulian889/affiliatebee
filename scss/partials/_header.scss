@@ -1,0 +1,128 @@
+header {
+  padding: 24px 0;
+  border-bottom: 1px solid $border;
+  background-color: #fff;
+  transition: all 0.4s;
+  // position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transition: all .4s;
+  .top-logo {
+    img {
+      height: 32px;
+    }
+  }
+
+  &.small-header {
+    padding: 16px 0;
+  }
+  @include md {
+    position: static;
+  }
+}
+
+.socials {
+  list-style: none;
+  li {
+    display: inline-block;
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      color: $regular;
+      transition: all 0.4s;
+      font-size: 1.8rem;
+      text-decoration: none;
+      &:hover {
+        color: $primary-shade;
+      }
+    }
+  }
+}
+
+@include md {
+  .socials.header {
+    display: none;
+  }
+}
+
+.header-wrapper,
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  .top-logo {
+    font-size: 2.4rem;
+    line-height: 24px;
+  }
+  nav.desktop-nav,
+  nav.footer-nav {
+    ul {
+      li {
+        list-style: none;
+        margin-right: 28px;
+        display: inline-block;
+        position: relative;
+        &::before {
+          content: '/';
+          position: absolute;
+          right: -20px;
+          top: 0;
+          color: #DFE0E8;
+        }
+        &:last-child  {
+          margin-right: 0;
+          &::before {
+            content: '';
+          }
+        }
+        a {
+          transition: all 0.4s;
+          font-weight: 500;
+          position: relative;
+          text-decoration: none;
+          span {
+            position: relative;
+            z-index: 9;
+            transition: all 0.4s;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+          &.active {
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: -2px;
+              width: calc(100% + 4px);
+              height: 6px;
+              background-color: #FFCC3E;
+            }
+          }
+        }
+      }
+    }
+    @include md {
+      display: none;
+    }
+  }
+  .mburger {
+    display: none;
+    @include md {
+      display: block;
+    }
+  }
+}
+
+.mburger {
+  width: 24px;
+  height: 24px!important;
+  --mb-bar-height: 2px;
+}
+
+#menu:not( .mm-menu ) {
+  display: none;
+}

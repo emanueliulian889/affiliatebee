@@ -1,0 +1,76 @@
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin cover {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+@mixin xs {
+  @media (max-width: 576px) { @content; }
+}
+@mixin sm {
+  @media (max-width: 769px) { @content; }
+}
+@mixin md {
+  @media (max-width: 992px) { @content; }
+}
+@mixin xl {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin xxl {
+  @media (max-width: 1400px) { @content; }
+}
+
+// column reverse
+.reverse-xl {
+  @include xl {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.reverse-md {
+  @include md {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.reverse-sm {
+  @include sm {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.reverse-xs {
+  @include xs {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.sticky {
+  position:-webkit-sticky !important;
+  position:sticky !important;
+  top: 8px;
+  @include sm {
+    position: static!important;
+  }
+}

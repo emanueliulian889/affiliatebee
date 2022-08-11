@@ -1,0 +1,55 @@
+.contact-page {
+    form {
+        max-width: 648px;
+        margin: 0 auto 64px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+        .row {
+            margin-bottom: 8px;
+        }
+        .submit-form {
+            margin-top: 16px;
+        }
+    }
+    .contact-blocks {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 128px;
+        @include md {
+            flex-direction: column;
+        }
+        @include xl {
+            margin-bottom: 64px;
+        }
+        .block {
+            border: 1px solid $border;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+            width: 312px;
+            margin: 0 12px;
+            padding: 24px;
+            display: flex;
+            .icon {
+                width: 32px;
+                height: 32px;
+                border-radius: 32px;
+                background-color: #EE9615;
+                color: #fff;
+                line-height: 32px;
+                font-size: 12px;
+                margin-right: 12px;
+                text-align: center;
+            }
+            .description {
+                text-align: left;
+                h6 {
+                    font-weight: 700;
+                    margin-bottom: 4px;
+                }
+            }
+            @include md {
+                margin: 0 0 24px;
+                width: 100%;
+            }
+        }
+    }
+}
