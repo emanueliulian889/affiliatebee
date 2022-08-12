@@ -65,8 +65,8 @@
 		</div>
 		<!--end::Divider-->
 		<!--begin::What we do-->
-		<div class="row reverse-sm" id="what-we-do">
-			<div class="col-lg-7 col-sm-6">
+		<div class="row reverse-md" id="what-we-do">
+			<div class="col-lg-7">
 				<!--begin::What we do_Article-->
 				<article class="wwd">
 					<ul>
@@ -86,7 +86,7 @@
 				</article>
 				<!--end::What we do_Article-->
 			</div>
-			<div class="col-lg-5 col-sm-6">
+			<div class="col-lg-5">
 				<h2 class="t-center sticky">What we do.</h2>
 			</div>
 		</div>
@@ -100,10 +100,10 @@
 		<!--end::Divider-->
 		<!--begin::Our methods-->
 		<div class="row">
-			<div class="col-lg-5 col-sm-6">
+			<div class="col-lg-5">
 				<h2 class="t-center sticky">Our methods.</h2>
 			</div>
-			<div class="col-lg-7 col-sm-6">
+			<div class="col-lg-7">
 				<article class="methods">
 					<ul>
 						<li>
